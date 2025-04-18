@@ -1,14 +1,20 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono } from 'next/font/google';
+import { Rubik, Karla } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/org/jallen/header/Header';
 import PageTransition from '@/components/org/jallen/transition/PageTransition';
 import StairTransition from '@/components/org/jallen/transition/StairTransition';
 import Footer from '@/components/org/jallen/footer/Footer';
 
-const jetBrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+const karla = Karla({
+  variable: '--font-karla',
+  weight: ['400', '700'],
+  subsets: ['latin'],
+});
+
+const rubik = Rubik({
+  variable: '--font-rubik',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
 });
 
@@ -25,9 +31,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${jetBrainsMono.variable} antialiased`}>
-        <Header />
+        className={`${karla.variable} ${rubik.variable} antialiased`}>
         <StairTransition />
+        <Header />
         <PageTransition>
           {children}
         </PageTransition>

@@ -20,36 +20,35 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 
-const profile = {
-  title: 'About Me',
-  description: 'Description',
-  details: [
-    {
-      fieldName: 'Name',
-      fieldValue: 'James Tadique'
-    },
-    {
-      fieldName: 'Phone',
-      fieldValue: '0000'
-    },
-    {
-      fieldName: 'Experience',
-      fieldValue: '11 Years'
-    },
-    {
-      fieldName: 'Email',
-      fieldValue: 'name@yahoo.com'
-    },
-    {
-      fieldName: 'Email II',
-      fieldValue: 'name@gmail.com'
-    },
-    {
-      fieldName: 'Nationality',
-      fieldValue: 'Filipino'
-    }
-  ]
-};
+const general = {};
+
+// details: [
+//   {
+//     fieldName: 'Name',
+//     fieldValue: 'James Tadique'
+//   },
+//   {
+//     fieldName: 'Phone',
+//     fieldValue: '0000'
+//   },
+//   {
+//     fieldName: 'Experience',
+//     fieldValue: '11 Years'
+//   },
+//   {
+//     fieldName: 'Email',
+//     fieldValue: 'name@yahoo.com'
+//   },
+//   {
+//     fieldName: 'Email II',
+//     fieldValue: 'name@gmail.com'
+//   },
+//   {
+//     fieldName: 'Nationality',
+//     fieldValue: 'Filipino'
+//   }
+// ]
+
 
 const experience = {
   title: 'Experience',
@@ -128,7 +127,7 @@ const ResumeImpl = () => {
       animate={{ 
         opacity: 1,
         transition: { 
-          delay: 2.4,
+          delay: 1.5,
           duration: 0.4,
           ease: 'easeIn'
         }
@@ -137,14 +136,34 @@ const ResumeImpl = () => {
     >
       <div className='container mx-auto'>
         <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 bg-transparent'>
+          <TabsList className='flex flex-row w-full max-w-[380px] mx-auto xl:flex-col xl:mx-0 bg-transparent'>
             <TabsTrigger value='profile'>Profile</TabsTrigger>
             <TabsTrigger value='experience'>Experience</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
           </TabsList>
 
           <div className='min-h-[70vh] w-full'>
-            <TabsContent value='profile' className='w-full'>Profile</TabsContent>
+            <TabsContent value='profile' className='w-full'>
+              <div className='flex flex-col gap-[30px]'>
+                <div className='flex flex-col gap-[10px] text-center xl:text-left'>
+                  {/* <h3 className='text-4xl font-bold'>{profile.title}</h3> */}
+                  {/* <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{profile.description}</p> */}
+                </div>
+
+                <ScrollArea className='h-[400px]'>
+                  <div className='flex flex-col gap-4'>
+                    <p>I am a full-stack developer with 11 years of total experience in different technical stacks. A person that finds enjoyment in learning about development such as different languages or technology, open to new challenges in coding and can be a team player. I thrive in research and development while delivering high quality systems.</p>
+
+                    <p>I am skilled at different libraries and frameworks such as JavaScript, TypeScript, React, Next.js and Angular using Node.js for server environment for front-end development. For back-end development, I am adept at using Java with knowledge of Spring framework, Spring boot, OAuth, Maven with great understanding of web services, microservices and restful API.</p>
+
+                    <p>I have good experience in using database management system such as MySQL, PostgreSQL, NoSQL, SQLite and Oracle Database. I am also proficient in using version control system such as Git with added fluency in deployment using Jenkins, Railway and Vercel.</p>
+
+                    <p>Additionally, I have knowledge with Python in small scale projects. I am also adept at creating test scripts using Playwright and Puppeteer to capture regression bugs that will occasionally happen during development cycle.</p>
+                  </div>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+
             <TabsContent value='experience' className='w-full'>
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{experience.title}</h3>
@@ -172,6 +191,7 @@ const ResumeImpl = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
+
             <TabsContent value='skills' className='w-full h-full'>
               <div className='flex flex-col gap-[30px]'>
                 <div className='flex flex-col gap-[30px] text-center xl:text-left'>

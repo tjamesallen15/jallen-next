@@ -1,5 +1,6 @@
 import Profile from '@/components/org/jallen/profile/Profile';
 import Socials from '@/components/org/jallen/socials/Socials';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 
@@ -13,7 +14,8 @@ const Home = () => {
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span className='text-xl'>Senior Software Developer</span>
             <h1 className='h1 mb-6'>
-              Hello I'm <br /> <span className='text-accent'>James Allen</span>
+              <span className='text-accent'>James Allen</span><br />
+              <span>Tadique</span>
             </h1>
 
             <p className='max-w-[500px] mb-9 text-white/80'>{profileMessage}</p>
@@ -40,6 +42,28 @@ const Home = () => {
             <Profile />
           </div>
 
+        </div>
+        <div className='hidden xl:flex flex-row gap-2 max-w-[1250px] flex-wrap'>
+          <Badge className='bg-white text-black'>HTML5</Badge>
+          <Badge className='bg-white text-black'>CSS3</Badge>
+          <Badge className='bg-white text-black'>TypeScript</Badge>
+          <Badge className='bg-white text-black'>JavaScript</Badge>
+          <Badge className='bg-white text-black'>HTML5</Badge>
+          <Badge className='bg-white text-black'>CSS3</Badge>
+          <Badge className='bg-white text-black'>TypeScript</Badge>
+          <Badge className='bg-white text-black'>JavaScript</Badge>
+          <Badge className='bg-white text-black'>HTML5</Badge>
+          <Badge className='bg-white text-black'>CSS3</Badge>
+          <Badge className='bg-white text-black'>TypeScript</Badge>
+          <Badge className='bg-white text-black'>JavaScript</Badge>
+          <Badge className='bg-white text-black'>HTML5</Badge>
+          <Badge className='bg-white text-black'>CSS3</Badge>
+          <Badge className='bg-white text-black'>TypeScript</Badge>
+          <Badge className='bg-white text-black'>JavaScript</Badge>
+          <Badge className='bg-white text-black'>HTML5</Badge>
+          <Badge className='bg-white text-black'>CSS3</Badge>
+          <Badge className='bg-white text-black'>TypeScript</Badge>
+          <Badge className='bg-white text-black'>JavaScript</Badge>
         </div>
       </div>
     </section>

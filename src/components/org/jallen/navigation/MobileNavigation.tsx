@@ -24,8 +24,9 @@ const MobileNavigation = () => {
   const pathName = usePathname();
   return (
     <Sheet>
-      <SheetTrigger className='flex justify-center items-center'>
-        <CiMenuFries className='text-[32px] text-accent' />
+      <SheetTrigger className='flex justify-center items-center gap-2 group'>
+        <CiMenuFries className='text-[20px] text-white group-hover:text-accent' />
+        <span className='text-white group-hover:text-accent hidden sm:block'>Menu</span>
       </SheetTrigger>
 
       <SheetContent className='flex flex-col'>
