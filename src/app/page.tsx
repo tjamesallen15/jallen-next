@@ -3,10 +3,13 @@ import Socials from '@/components/org/jallen/socials/Socials';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
+import { getSkills } from './data/api/skills';
+import { Skills } from './data/common/types';
 
 const profileMessage = 'I am a full-stack developer with 11 years of total experience in different technical stacks. A person that finds enjoyment in learning about software development such as different languages or technology, open to new challenges in coding and can be a team player. I thrive in research and development while delivering high quality systems.';
 
-const Home = () => {
+const Home = async () => {
+  const skills: Skills[] = await getSkills();
   return (
     <section className='h-full'>
       <div className='container mx-auto h-full'>
@@ -24,7 +27,7 @@ const Home = () => {
               <Button
                 variant='outline'
                 size='lg'
-                className='uppercase flex items-center gap-2 text-black'
+                className='hidden uppercase items-center gap-2 text-black'
               >
                 <span>Download CV</span>
                 <FiDownload className='text-xl text-black' />
@@ -44,26 +47,13 @@ const Home = () => {
 
         </div>
         <div className='hidden xl:flex flex-row gap-2 max-w-[1250px] flex-wrap'>
-          <Badge className='bg-white text-black'>HTML5</Badge>
-          <Badge className='bg-white text-black'>CSS3</Badge>
-          <Badge className='bg-white text-black'>TypeScript</Badge>
-          <Badge className='bg-white text-black'>JavaScript</Badge>
-          <Badge className='bg-white text-black'>HTML5</Badge>
-          <Badge className='bg-white text-black'>CSS3</Badge>
-          <Badge className='bg-white text-black'>TypeScript</Badge>
-          <Badge className='bg-white text-black'>JavaScript</Badge>
-          <Badge className='bg-white text-black'>HTML5</Badge>
-          <Badge className='bg-white text-black'>CSS3</Badge>
-          <Badge className='bg-white text-black'>TypeScript</Badge>
-          <Badge className='bg-white text-black'>JavaScript</Badge>
-          <Badge className='bg-white text-black'>HTML5</Badge>
-          <Badge className='bg-white text-black'>CSS3</Badge>
-          <Badge className='bg-white text-black'>TypeScript</Badge>
-          <Badge className='bg-white text-black'>JavaScript</Badge>
-          <Badge className='bg-white text-black'>HTML5</Badge>
-          <Badge className='bg-white text-black'>CSS3</Badge>
-          <Badge className='bg-white text-black'>TypeScript</Badge>
-          <Badge className='bg-white text-black'>JavaScript</Badge>
+          {
+            skills.map((item, index: number) => {
+              return (
+                <Badge key={index} className='bg-white text-black'>{item.name}</Badge>
+              )
+            })
+          }
         </div>
       </div>
     </section>
