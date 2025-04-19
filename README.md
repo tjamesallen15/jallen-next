@@ -1,6 +1,6 @@
-# Jallen-Portfolio
+# Jallen-Next
 
-The Official Page of Jallen Portfolio
+The Official Portfolio of Jallen created using Next.js
 
 ## Members
 
