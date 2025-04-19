@@ -16,6 +16,8 @@ All notable changes to this project will be documented in this file.
 
 ## 1.1.0 Fixes
 
+`[General]` Fixed caching and revalidating of data.
+`[General]` Added loader on top of the page when waiting to fetch data.
 `[Footer]` Fixed design and styles.
 `[Header]` Fixed design and styles.
 `[Index]` Added data fetch for skills badges.

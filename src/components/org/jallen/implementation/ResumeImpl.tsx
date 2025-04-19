@@ -17,7 +17,7 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
       animate={{ 
         opacity: 1,
         transition: { 
-          delay: 1.5,
+          delay: 1.0,
           duration: 0.4,
           ease: 'easeIn'
         }

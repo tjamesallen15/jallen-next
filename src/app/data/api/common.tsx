@@ -1,7 +1,18 @@
 import { FaAngular, FaCss3, FaEnvelope, FaFigma, FaGit, FaGithub, FaGitlab, FaHtml5, FaJava, FaJs, FaLinkedin, FaNodeJs, FaPython, FaReact } from 'react-icons/fa';
-import { Heading, SkillIcon, Social } from '../common/types';
-import { SiApachemaven, SiMysql, SiNextdotjs, SiOracle, SiPostgresql, SiPuppeteer, SiSpring, SiSpringboot, SiSqlite, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { Heading, IndexData, SkillIcon, Social } from '../common/types';
+import { SiApachemaven, SiMysql, SiNextdotjs, SiOracle, SiPostgresql, SiPuppeteer, SiRailway, SiSpring, SiSpringboot, SiSqlite, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
 import { TbBrandOauth } from 'react-icons/tb';
+
+export function getIndexData() {
+  const data: IndexData = {
+    title: 'Senior Software Developer',
+    first: 'James Allen',
+    last: 'Tadique',
+    message: 'I am a full-stack developer with 11 years of total experience in different technical stacks. A person that finds enjoyment in learning about software development such as different languages or technology, open to new challenges in coding and can be a team player. I thrive in research and development while delivering high quality systems.'
+  }
+  
+  return data;
+}
 
 export function getProfileHeading() {
   const profile: Heading = {
@@ -166,6 +177,14 @@ export function getSkillIcon(name: string) {
     {
       name: 'GitLab',
       icon: <FaGitlab />
+    },
+    {
+      name: 'Railway',
+      icon: <SiRailway />
+    },
+    {
+      name: 'Vercel',
+      icon: <SiVercel />
     }
   ];
 

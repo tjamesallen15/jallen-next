@@ -5,6 +5,7 @@ import Header from '@/components/org/jallen/header/Header';
 import PageTransition from '@/components/org/jallen/transition/PageTransition';
 import StairTransition from '@/components/org/jallen/transition/StairTransition';
 import Footer from '@/components/org/jallen/footer/Footer';
+import Loader from './loading';
 
 const karla = Karla({
   variable: '--font-karla',
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={`${karla.variable} ${rubik.variable} antialiased`}>
+        <Loader />
         <StairTransition />
         <Header />
         <PageTransition>

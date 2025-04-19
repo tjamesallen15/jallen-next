@@ -25,7 +25,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                 animate={{ 
                   opacity: 1,
                   transition: { 
-                    delay: 0.5,
+                    delay: 1.0,
                     duration: 0.4,
                     ease: 'easeIn'
                   }
@@ -78,7 +78,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                   animate={{ 
                     opacity: 1,
                     transition: { 
-                      delay: 0.5,
+                      delay: 1.0,
                       duration: 0.4,
                       ease: 'easeIn'
                     }

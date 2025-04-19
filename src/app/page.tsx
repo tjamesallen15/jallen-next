@@ -4,24 +4,24 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 import { getSkills } from './data/api/skills';
-import { Skills } from './data/common/types';
-
-const profileMessage = 'I am a full-stack developer with 11 years of total experience in different technical stacks. A person that finds enjoyment in learning about software development such as different languages or technology, open to new challenges in coding and can be a team player. I thrive in research and development while delivering high quality systems.';
+import { IndexData, Skills } from './data/common/types';
+import { getIndexData } from './data/api/common';
 
 const Home = async () => {
   const skills: Skills[] = await getSkills();
+  const data: IndexData = getIndexData();
   return (
     <section className='h-full'>
       <div className='container mx-auto h-full'>
         <div className='flex flex-col pt-8 xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
           <div className='text-center xl:text-left order-2 xl:order-none'>
-            <span className='text-xl'>Senior Software Developer</span>
+            <span className='text-xl'>{data.title}</span>
             <h1 className='h1 mb-6'>
-              <span className='text-accent'>James Allen</span><br />
-              <span>Tadique</span>
+              <span className='text-accent'>{data.first}</span><br />
+              <span>{data.last}</span>
             </h1>
 
-            <p className='max-w-[500px] mb-9 text-white/80'>{profileMessage}</p>
+            <p className='max-w-[500px] mb-9 text-white/80'>{data.message}</p>
 
             <div className='flex flex-col xl:flex-row items-center gap-8'>
               <Button

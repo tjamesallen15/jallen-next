@@ -63,6 +63,13 @@ export interface Heading {
   value: string;
 }
 
+export interface IndexData {
+  title: string,
+  first: string,
+  last: string,
+  message: string
+}
+
 export interface SkillIcon {
   name: string,
   icon: React.ReactNode

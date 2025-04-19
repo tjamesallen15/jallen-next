@@ -1,15 +1,7 @@
 import { About } from '../common/types';
+import { getValidateData } from './gateway';
 
 export async function getAbouts() {
-  const response = await fetch('https://tyrael.up.railway.app/abouts', {
-    cache: 'no-store',
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Basic ${btoa('root:1234')}`,
-    },
-  });
-  
-  const data: About[] = await (response.json());
+  const data: About[] = await getValidateData('abouts');
   return data;
 }

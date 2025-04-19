@@ -1,30 +1,13 @@
 import { ProcessWork, Work } from '../common/types';
+import { getValidateData } from './gateway';
 
 export async function getWorks() {
-  const response = await fetch('https://tyrael.up.railway.app/works', {
-    cache: 'no-store',
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Basic ${btoa('root:1234')}`,
-    },
-  });
-  
-  const data: Work[] = await (response.json());
+  const data: Work[] = await getValidateData('works');
   return data;
 }
 
 export async function getProcessWorks() {
-  const response = await fetch('https://tyrael.up.railway.app/works', {
-    cache: 'no-store',
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Basic ${btoa('root:1234')}`,
-    },
-  });
-  
-  const data: ProcessWork[] = await (response.json());
+  const data: ProcessWork[] = await getValidateData('works');
 
   for (let i = 0; i < data.length; i++) {
     const work: ProcessWork = data[i];
