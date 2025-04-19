@@ -7,7 +7,7 @@ The Official Page of Jallen Portfolio
 Listed below are the contributors for this project.
 
 * James Allen Tadique
-* Genessa Nepomuceno
+* Genessa Nepomuceno-Tadique
 
 # Project Rules
 
