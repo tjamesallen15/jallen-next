@@ -14,12 +14,12 @@ export async function getServerData(path: string) {
   return data;
 }
 
-export async function getValidateData(path: string) {
+export async function getValidateData(path: string, sec?: number) {
   const apiPath = `https://tyrael.up.railway.app/${path}`;
 
   const response = await fetch(apiPath, {
     next: {
-      revalidate: 3600,
+      revalidate: sec || 600,
     },
     method: 'GET',
     headers: {
