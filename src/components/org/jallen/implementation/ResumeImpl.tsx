@@ -40,7 +40,7 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
                       className='flex flex-row w-full justify-between'
                     >
                       <div className='text-accent'>{item.name}:</div>
-                      <div className='text-white/60 font-ruka'>{item.value}</div>
+                      <div className='text-white/60 font-karla'>{item.value}</div>
                     </div>
                   )
                 })
@@ -61,7 +61,7 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
                     {
                       abouts.map((item: About, index: number) => {
                         return (
-                          <p className='p-6' key={index}>{item.description}</p>
+                          <p className='font-karla pt-4 ps-6 pe-6' key={index}>{item.description}</p>
                         )
                       })
                     }
@@ -91,7 +91,7 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
                             <span className='text-white/60 text-sm'>{item.total}</span>
                             <span className='text-white/60 text-sm'>{item.location}</span>
                             <div className='mt-2'>
-                              <p>{item.description}</p>
+                              <p className='font-karla'>{item.description}</p>
                             </div>
                           </li>
                         )

@@ -63,7 +63,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                         </div>
                         <h2 className='text-[18px] font-bold leading-none text-accent transition-all duration-500'>{item.tech}</h2>
                         <h2 className='text-[16px] text-white/60 leading-none'>{item.category}</h2>
-                        <p className='text-white/60 mt-4'>{item.description}</p>
+                        <p className='text-white/90 mt-4 font-karla'>{item.description}</p>
                         <div className='border-b border-white/20 w-full' />
                       </div>
                     )
@@ -87,7 +87,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                   {
                     works.map((item, index) => {
                       return (
-                        <div className='flex-1 flex flex-col justify-center gap-2' key={index}>
+                        <div className='flex-1 flex flex-col justify-center text-center align-center gap-2 md:text-left' key={index}>
                           <div className='text-3xl font-extrabold'>{item.name}</div>
                           <div className='text-[18px] font-bold leading-none text-accent transition-all duration-500'>{item.sub}</div>
                           <div className='text-[14px] text-white/60 leading-none'>{item.technology}</div>
@@ -95,7 +95,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                           {
                             item.descriptions.map((description, index) => {
                               return (
-                                <div className='gap-2' key={index}>{description}</div>
+                                <div className='text-white/90 font-karla gap-2' key={index}>{description}</div>
                               )
                             })
                           }
