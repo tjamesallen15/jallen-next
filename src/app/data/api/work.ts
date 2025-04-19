@@ -1,13 +1,13 @@
 import { ProcessWork, Work } from '../common/types';
-import { getValidateData } from './gateway';
+import { getServerData } from './gateway';
 
 export async function getWorks() {
-  const data: Work[] = await getValidateData('works');
+  const data: Work[] = await getServerData('works');
   return data;
 }
 
 export async function getProcessWorks() {
-  const data: ProcessWork[] = await getValidateData('works');
+  const data: ProcessWork[] = await getServerData('works');
 
   for (let i = 0; i < data.length; i++) {
     const work: ProcessWork = data[i];
