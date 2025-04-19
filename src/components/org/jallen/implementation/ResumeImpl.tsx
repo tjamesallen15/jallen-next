@@ -25,7 +25,7 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
       className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0 gap-6'
     >
       <div className='container mx-auto'>
-        <Tabs defaultValue='profile' className='flex flex-col xl:flex-row gap-[60px]'>
+        <Tabs defaultValue='profile' className='flex flex-col gap-[20px] xl:flex-row xl:gap-[60px]'>
           <TabsList className='flex flex-row w-full max-w-[380px] mx-auto xl:flex-col xl:mx-0 bg-transparent'>
             <TabsTrigger value={profileHeading.value}>{profileHeading.title}</TabsTrigger>
             <TabsTrigger value={experienceHeading.value}>{experienceHeading.title}</TabsTrigger>

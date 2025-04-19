@@ -72,7 +72,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
               </motion.div>
             </TabsContent>
             <TabsContent value='work'>
-              <ScrollArea className='h-[400px]'>
+              <ScrollArea className='h-[525px]'>
                 <motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ 
