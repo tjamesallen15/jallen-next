@@ -1,7 +1,7 @@
 import { Application } from '../common/types';
-import { getValidateData } from './gateway';
+import { getServerData, getValidateData } from './gateway';
 
 export async function getApplications() {
-  const data: Application[] = await getValidateData('applications');
+  const data: Application[] = await getServerData('applications');
   return data;
 }

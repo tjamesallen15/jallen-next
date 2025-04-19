@@ -42,7 +42,7 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                             {
                               item.site !== null ? 
                                 <Link
-                                  href=''
+                                  href={item.site}
                                   className='w-[32px] h-[32px] rounded-full bg-white hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-360'
                                 >
                                   <FaGlobe className='text-primary text-xl' />
