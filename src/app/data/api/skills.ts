@@ -27,7 +27,7 @@ export async function getSkillsWithIcons() {
   
   const data: Skills[] = await (response.json());
   for (let i = 0; i < data.length; i++) {
-    let skills: Skills = data[i];
+    const skills: Skills = data[i];
     skills.icon = getSkillIcon(skills.name);
   }
 

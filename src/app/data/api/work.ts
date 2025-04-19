@@ -27,7 +27,7 @@ export async function getProcessWorks() {
   const data: ProcessWork[] = await (response.json());
 
   for (let i = 0; i < data.length; i++) {
-    let work: ProcessWork = data[i];
+    const work: ProcessWork = data[i];
     const descriptions = work.description.split('-');
     const filteredDescriptions = descriptions.filter((description) => description.trim() !== '');
     work.descriptions = filteredDescriptions;

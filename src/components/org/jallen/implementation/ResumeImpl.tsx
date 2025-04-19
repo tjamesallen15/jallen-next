@@ -22,49 +22,6 @@ import { motion } from 'framer-motion';
 import { About, Experience, Heading, Information, Skills } from '@/app/data/common/types';
 import { getProfileHeading, getExperienceHeading, getSkillsHeading } from '@/app/data/api/common';
 
-const skills = {
-  title: 'Skills',
-  description: 'Description',
-  details: [
-    {
-      icon: <FaHtml5 />,
-      name: 'HTML5'
-    },
-    {
-      icon: <FaCss3 />,
-      name: 'CSS3'
-    },
-    {
-      icon: <FaJs />,
-      name: 'JavaScript'
-    },
-    {
-      icon: <FaReact />,
-      name: 'React'
-    },
-    {
-      icon: <SiTypescript />,
-      name: 'TypeScript'
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: 'Tailwind'
-    },
-    {
-      icon: <FaNodeJs />,
-      name: 'Node.js'
-    },
-    {
-      icon: <FaFigma />,
-      name: 'Figma'
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: 'Next.js'
-    }
-  ]
-};
-
 const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: About[], experiences: Experience[], skills: Skills[], informations: Information[] }) => {
   const profileHeading: Heading = getProfileHeading();
   const experienceHeading: Heading = getExperienceHeading();

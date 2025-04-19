@@ -2,35 +2,7 @@
 
 import Link from 'next/link';
 
-const services = [
-  {
-    num: '01',
-    title: 'Web Development 01',
-    description: 'Description 01',
-    href: ''
-  },
-  {
-    num: '02',
-    title: 'Web Development 02',
-    description: 'Description 02',
-    href: ''
-  },
-  {
-    num: '03',
-    title: 'Web Development 03',
-    description: 'Description 03',
-    href: ''
-  },
-  {
-    num: '04',
-    title: 'Web Development 04',
-    description: 'Description 04',
-    href: ''
-  }
-];
-
 import { motion } from 'framer-motion';
-import { BsArrowDownRight } from 'react-icons/bs';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Application, ProcessWork } from '@/app/data/common/types';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
