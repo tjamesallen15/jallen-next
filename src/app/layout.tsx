@@ -6,7 +6,6 @@ import PageTransition from '@/components/org/jallen/transition/PageTransition';
 import StairTransition from '@/components/org/jallen/transition/StairTransition';
 import Footer from '@/components/org/jallen/footer/Footer';
 import Loader from './loading';
-import Head from 'next/head';
 
 const karla = Karla({
   variable: '--font-karla',
