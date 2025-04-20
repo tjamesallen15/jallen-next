@@ -66,7 +66,7 @@ export function getFooterSocials() {
   const socials: Social[] = [
     {
       name: 'Next.js',
-      href: 'https://github.com/tjamesallen15',
+      href: 'https://nextjs.org/',
       icon: <SiNextdotjs />,
       
     },
