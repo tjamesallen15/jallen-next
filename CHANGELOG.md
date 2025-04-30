@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.2.0
+
+## 1.2.0 Features
+
+- `[Navigation]` - Added additional icons.
+
+## 1.2.0 Fixes
+
+- `[Header]` - Fixed color theme.
+- `[Home]` - Fixed color theme.
+- `[Navigation]` - Fixed color theme.
+- `[Projects]` - Fixed color theme.
+- `[Resume]` - Fixed color theme.
+- `[Footer]` - Fixed color theme.
+
 # 1.1.0
 
 ## 1.1.0 Features

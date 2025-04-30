@@ -21,7 +21,7 @@ const Home = async () => {
               <span>{data.last}</span>
             </h1>
 
-            <p className='font-karla max-w-[500px] mb-9 text-white/80'>{data.message}</p>
+            <p className='font-karla max-w-[500px] mb-9'>{data.message}</p>
 
             <div className='flex flex-col xl:flex-row items-center gap-8'>
               <Button

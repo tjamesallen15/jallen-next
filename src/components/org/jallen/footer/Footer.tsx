@@ -17,15 +17,15 @@ const Footer = () => {
           ease: 'easeInOut'
         }
       }}
-      className='fixed w-full flex-row justify-between bg-gray-800 bottom-0 p-4 hidden md:flex'>
-      <span className='text-xs text-gray-500'>Created using Next.js &#169; Copyright 2025 of James Allen All Rights Reserved.</span>
+      className='fixed w-full flex-row justify-between bg-sidebar bottom-0 p-4 hidden md:flex'>
+      <span className='text-xs text-link'>Created using Next.js &#169; Copyright 2025 of James Allen All Rights Reserved.</span>
       <div className='flex flex-row gap-6 items-center'>
         {
           socialList.map((social, index) => {
             return (
               <div key={index} className='flex flex-row gap-2'>
-                {social.icon}
-                <a href={social.href} className='text-xs text-gray-500 hover:underline'>{social.name}</a>
+                <span className='text-link'>{social.icon}</span>
+                <a href={social.href} className='text-xs text-link hover:underline'>{social.name}</a>
               </div>
             )
           })

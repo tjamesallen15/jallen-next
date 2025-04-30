@@ -39,8 +39,8 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
                       key={index}
                       className='flex flex-row w-full justify-between'
                     >
-                      <div className='text-accent'>{item.name}:</div>
-                      <div className='text-white/60 font-karla'>{item.value}</div>
+                      <div className='text-accent font-semibold'>{item.name}:</div>
+                      <div className='font-karla text-foreground'>{item.value}</div>
                     </div>
                   )
                 })
@@ -53,15 +53,15 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
               <div className='flex flex-col gap-[30px]'>
                 <div className='flex flex-col gap-[10px] text-center xl:text-left'>
                   <h3 className='text-4xl font-bold'>{profileHeading.title}</h3>
-                  <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{profileHeading.description}</p>
+                  <p className='max-w-[600px] mx-auto xl:mx-0'>{profileHeading.description}</p>
                 </div>
 
                 <ScrollArea className='h-[400px]'>
-                  <div className='flex flex-col gap-2 bg-gray-700 rounded-xl'>
+                  <div className='flex flex-col gap-2 bg-sidebar rounded-md'>
                     {
                       abouts.map((item: About, index: number) => {
                         return (
-                          <p className='font-karla pt-4 ps-6 pe-6' key={index}>{item.description}</p>
+                          <p className='font-karla pt-4 ps-6 pe-6 text-primary' key={index}>{item.description}</p>
                         )
                       })
                     }
@@ -74,7 +74,7 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <div className='flex flex-col gap-[10px] text-center xl:text-left'>
                   <h3 className='text-4xl font-bold'>{experienceHeading.title}</h3>
-                  <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{experienceHeading.description}</p>
+                  <p className='max-w-[600px] mx-auto xl:mx-0'>{experienceHeading.description}</p>
                 </div>
                 <ScrollArea className='h-[400px]'>
                   <ul className='flex flex-col gap-4'>
@@ -83,15 +83,15 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
                         return (
                           <li 
                             key={index}
-                            className='bg-gray-700 h-auto py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                            className='bg-sidebar h-auto py-6 px-10 rounded-md flex flex-col justify-center items-center lg:items-start gap-1'
                           > 
-                            <h3 className='text-xl font-semibold max-w-[400px] min-h-[20px] text-center lg:text-left'>{item.company}</h3>
-                            <h4>{item.position}</h4>
-                            <span className='text-accent text-sm'>{item.duration}</span>
-                            <span className='text-white/60 text-sm'>{item.total}</span>
-                            <span className='text-white/60 text-sm'>{item.location}</span>
+                            <h3 className='text-primary text-xl font-semibold max-w-[400px] min-h-[20px] text-center lg:text-left'>{item.company}</h3>
+                            <h4 className='text-primary'>{item.position}</h4>
+                            <span className='text-link-accent text-sm'>{item.duration}</span>
+                            <span className='text-link text-sm'>{item.total}</span>
+                            <span className='text-link text-sm'>{item.location}</span>
                             <div className='mt-2'>
-                              <p className='font-karla'>{item.description}</p>
+                              <p className='font-karla text-primary'>{item.description}</p>
                             </div>
                           </li>
                         )
@@ -106,10 +106,10 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
               <div className='flex flex-col gap-[30px]'>
                 <div className='flex flex-col gap-[10px] text-center xl:text-left'>
                   <h3 className='text-4xl font-bold'>{skillsHeading.title}</h3>
-                  <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{skillsHeading.description}</p>
+                  <p className='max-w-[600px] mx-auto xl:mx-0'>{skillsHeading.description}</p>
                 </div>
                 <ScrollArea className='h-[400px]'>
-                  <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                  <ul className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 xl:gap-[30px]'>
                     {
                       skills.map((item: Skills, index: number) => {
                         if (item.icon !== undefined) {
@@ -117,11 +117,11 @@ const ResumeImpl = ({ abouts, experiences, skills, informations } : { abouts: Ab
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-gray-700 rounded-xl flex justify-center items-center group'>
-                                    <div className='text-6xl group-hover:text-accent transition-all duration:300'>{item.icon}</div>
+                                  <TooltipTrigger className='w-full h-[110px] bg-sidebar text-primary rounded-md flex justify-center items-center hover:bg-gray-500'>
+                                    <div className='text-6xl transition-all duration:300'>{item.icon}</div>
                                   </TooltipTrigger>
                                   <TooltipContent>
-                                    <p>{item.name}</p>
+                                    <p className='text-accent font-semibold'>{item.name}</p>
                                   </TooltipContent>
                                 </Tooltip>
                               </TooltipProvider>

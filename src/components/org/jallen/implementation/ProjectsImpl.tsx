@@ -43,9 +43,9 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                               item.site !== null ? 
                                 <Link
                                   href={item.site}
-                                  className='w-[32px] h-[32px] rounded-full bg-white hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-360'
+                                  className='w-[32px] h-[32px] rounded-full bg-white transition-all duration-500 flex justify-center items-center hover:text-primary hover:bg-accent hover:-rotate-360'
                                 >
-                                  <FaGlobe className='text-primary text-xl' />
+                                  <FaGlobe className='text-xl w-[28px] h-[28px]' />
                                 </Link>
                               : null
                             }
@@ -53,18 +53,18 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                               item.repository !== 'N/A' ?
                                 <Link 
                                   href={item.repository}  
-                                  className='w-[32px] h-[32px] rounded-full bg-white hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-360'
+                                  className='w-[32px] h-[32px] rounded-full bg-white transition-all duration-500 flex justify-center items-center hover:text-primary hover:bg-accent hover:-rotate-360'
                                 >
-                                  <FaGithub className='text-primary text-xl'/>
+                                  <FaGithub className='text-xl w-[28px] h-[28px]'/>
                                 </Link>
                               : null
                             }
                           </div>
                         </div>
                         <h2 className='text-[18px] font-bold leading-none text-accent transition-all duration-500'>{item.tech}</h2>
-                        <h2 className='text-[16px] text-white/60 leading-none'>{item.category}</h2>
-                        <p className='text-white/90 mt-4 font-karla'>{item.description}</p>
-                        <div className='border-b border-white/20 w-full' />
+                        <h2 className='text-[14px] text-foreground font-semibold leading-none'>{item.category}</h2>
+                        <p className='text-foreground mt-4 font-karla'>{item.description}</p>
+                        <div className='border-b border-sidebar w-full' />
                       </div>
                     )
                   })
@@ -90,16 +90,16 @@ const ProjectsImpl = ({ applications, works } : { applications: Application[], w
                         <div className='flex-1 flex flex-col justify-center text-center align-center gap-2 md:text-left' key={index}>
                           <div className='text-3xl font-extrabold'>{item.name}</div>
                           <div className='text-[18px] font-bold leading-none text-accent transition-all duration-500'>{item.sub}</div>
-                          <div className='text-[14px] text-white/60 leading-none'>{item.technology}</div>
+                          <div className='text-[14px] text-link-accent font-semibold leading-none'>{item.technology}</div>
                           <div className='text-[16px] font-semibold leading-none mb-2'>{item.company}</div>
                           {
                             item.descriptions.map((description, index) => {
                               return (
-                                <div className='text-white/90 font-karla gap-2' key={index}>{description}</div>
+                                <div className='text-foreground font-karla gap-2' key={index}>{description}</div>
                               )
                             })
                           }
-                          <div className='border-b border-white/20 w-full' />
+                          <div className='border-b border-sidebar w-full' />
                         </div>
                       )
                     })
