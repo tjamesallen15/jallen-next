@@ -7,24 +7,11 @@ import { IoMdMenu } from 'react-icons/io';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
 import Socials from '../socials/Socials';
-
-const links = [
-  {
-    name: 'Home',
-    path: '/'
-  },
-  {
-    name: 'Resume',
-    path: '/resume'
-  },
-  {
-    name: 'Projects',
-    path: '/projects'
-  }
-];
+import { getNavigationItems } from '@/app/data/api/common';
 
 const MobileNavigation = () => {
   const pathName = usePathname();
+  const links = getNavigationItems();
   return (
     <Sheet>
       <SheetTrigger className='flex justify-center items-center gap-2 group'>
@@ -37,13 +24,15 @@ const MobileNavigation = () => {
         <div className='mt-32 mb-40 text-center text-2xl text-primary'>James Allen</div>
 
         <nav className='flex flex-col justify-center items-center gap-8'>
-          { links.map((link, index) => {
-            return (
-              <Link href={link.path} key={index} className={`${link.path === pathName && "!text-link-accent border-b-2 border-link-accent"} font-karla text-primary capitalize font-medium hover:text-link-accent transition-all`}>
-                {link.name}
-              </Link>
-            )
-          })}
+          { 
+            links.map((link, index) => {
+              return (
+                <Link href={link.path} key={index} className={`${link.path === pathName && "!text-link-accent border-b-2 border-link-accent"} font-karla text-primary capitalize font-medium hover:text-link-accent transition-all`}>
+                  {link.name}
+                </Link>
+              )
+            })
+          }
         </nav>
 
         <div className='flex flex-col xl:flex-row items-center gap-8 mt-2'>

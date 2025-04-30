@@ -63,6 +63,11 @@ export interface Heading {
   value: string;
 }
 
+export interface NavigationItem {
+  name: string;
+  path: string;
+}
+
 export interface IndexData {
   title: string,
   first: string,

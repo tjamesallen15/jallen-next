@@ -1,5 +1,5 @@
 import { FaAngular, FaCss3, FaEnvelope, FaFigma, FaGit, FaGithub, FaGitlab, FaHtml5, FaJava, FaJenkins, FaJs, FaLinkedin, FaNodeJs, FaPython, FaReact } from 'react-icons/fa';
-import { Heading, IndexData, SkillIcon, Social } from '../common/types';
+import { Heading, IndexData, NavigationItem, SkillIcon, Social } from '../common/types';
 import { SiApachemaven, SiMysql, SiNextdotjs, SiOracle, SiPostgresql, SiPuppeteer, SiRailway, SiSpring, SiSpringboot, SiSqlite, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
 import { TbBrandOauth } from 'react-icons/tb';
 
@@ -194,4 +194,23 @@ export function getSkillIcon(name: string) {
 
   const filteredSkillIcon: SkillIcon = skills.filter((item: SkillIcon) => item.name === name)[0];
   return filteredSkillIcon?.icon;
+}
+
+export function getNavigationItems() {
+  const navigationItems: NavigationItem[] = [
+    {
+      name: 'Home',
+      path: '/'
+    },
+    {
+      name: 'Resume',
+      path: '/resume'
+    },
+    {
+      name: 'Projects',
+      path: '/projects'
+    }
+  ];
+
+  return navigationItems;
 }
