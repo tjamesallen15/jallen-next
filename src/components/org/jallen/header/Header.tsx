@@ -18,7 +18,7 @@ const Header = () => {
           <Navigation />
           <Link href='https://www.linkedin.com/in/tjamesallen15/'>
             <Button className='gap-2 hover:bg-accent transition-all bg-white text-foreground hover:text-primary'>
-              Hire me
+              <span className='text-[14px] font-medium'>Hire me</span>
               <FaLongArrowAltRight />
             </Button>
           </Link>
@@ -28,7 +28,7 @@ const Header = () => {
           <MobileNavigation />
           <Link href='https://www.linkedin.com/in/tjamesallen15/'>
             <Button className='gap-2 hover:bg-accent transition-all bg-white text-foreground hover:text-primary'>
-              Hire me
+              <span className='text-[14px] font-medium'>Hire me</span>
               <FaLongArrowAltRight />
             </Button>
           </Link>
