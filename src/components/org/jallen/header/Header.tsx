@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Navigation from '../navigation/Navigation';
 import MobileNavigation from '../navigation/MobileNavigation';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Header = () => {
   return (
