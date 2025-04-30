@@ -3,7 +3,6 @@
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { CiBurger, CiMenuFries } from 'react-icons/ci';
 import { IoMdMenu } from 'react-icons/io';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';

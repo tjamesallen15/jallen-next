@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { FaArrowRight, FaLongArrowAltRight } from 'react-icons/fa';
 import Navigation from '../navigation/Navigation';
 import MobileNavigation from '../navigation/MobileNavigation';
 
