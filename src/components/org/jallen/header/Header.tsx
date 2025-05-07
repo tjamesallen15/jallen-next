@@ -5,12 +5,16 @@ import { Button } from '@/components/ui/button';
 import Navigation from '../navigation/Navigation';
 import MobileNavigation from '../navigation/MobileNavigation';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { getPortfolioView } from '@/app/data/api/common';
 
 const Header = () => {
   function handleChange() {
     const el: HTMLInputElement = document.getElementById('viewer') as HTMLInputElement;
     const val = el.value.toString();
-    if (val === '2') window.location.href = 'https://jallen-react.vercel.app/';
+    if (val !== 'next') {
+      const url = getPortfolioView(el.value) || 'https://jallen-next.vercel.app/';
+      window.location.href = url;
+    }
   }
 
   return (
@@ -24,8 +28,9 @@ const Header = () => {
           </Link>
           <div>
             <select id='viewer' className='bg-sidebar font-karla text-sm' onChange={handleChange}>
-              <option value='1'>Next.js</option>
-              <option value='2'>React</option>
+              <option value='next'>Next.js</option>
+              <option value='react'>React</option>
+              <option value='vue'>Vue.js</option>
             </select>
           </div>
         </div>
